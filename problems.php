@@ -114,13 +114,19 @@ echo "<br/>";
 
 $num =[0,1,0,3,12];
 $newnum=[];
- foreach ($num as $number){
-    if ($number == 0){
-       $newnum[] =array_push($newnum,$number);
-    } else {
-       $newnum[] =sort ($num);
+ 
+ foreach ($num as $number) {
+    if ($number !== 0) {
+        $newnum[] = $number;
     }
- } print_r($newnum);
+}
+foreach ($num as $number) {
+    if ($number === 0) {
+        $newnum[] = $number;
+    }
+}
+echo "<br>";
+ print_r($newnum);
 
  echo "<br/>";
     echo "<br/>";
